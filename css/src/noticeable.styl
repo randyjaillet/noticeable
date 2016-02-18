@@ -1,0 +1,96 @@
+green	= #53b248
+blue	= #4774b3
+yellow	= #b2b347
+red		= #b34747
+
+#noticeable-container
+	position fixed
+	top 0
+	right 0
+	text-align right
+	max-height 100vh
+	overflow auto
+
+	.noticeable
+		margin 5px
+	
+		.inner
+			display inline-block
+			position relative
+			padding 8px 13px
+			background-color rgba(black, 0.7)
+			border 2px solid black
+			color #CCC
+			border-radius 50px
+			cursor pointer
+			
+			a
+				display inline-block
+				margin-left 15px
+				color inherit
+				text-decoration underline
+	
+		&.success .inner
+			border-color green
+			color darken(green, 45%)
+			background-color rgba(green, 0.7)
+			
+			&:before
+				display inline-block
+				content ' '
+				height 12px
+				width 5px
+				margin -3px 10px 0 0
+				border 5px solid @color
+				border-top none
+				border-left none
+				transform rotate(45deg)
+		
+		&.info .inner
+			border-color blue
+			color darken(blue, 40%)
+			background-color rgba(blue, 0.7)
+			
+			&:before
+				display inline-block
+				vertical-align middle
+				margin -4px 10px 0 0
+				content 'i'
+				font-size 130%
+				line-height 10px
+				font-weight 900
+		
+		&.warning .inner
+			border-color yellow
+			color darken(yellow, 45%)
+			background-color rgba(yellow, 0.7)
+		
+			&:before
+				display inline-block
+				vertical-align middle
+				margin -4px 11px 0 0
+				content '!'
+				font-size 150%
+				line-height 10px
+				font-weight 900
+
+		&.error .inner
+			border-color red
+			color darken(red, 30%)
+			background-color rgba(red, 0.7)
+		
+			&:before
+				display inline-block
+				vertical-align middle
+				margin -4px 6px 0 0
+				content '+'
+				font-size 200%
+				line-height 10px
+				font-weight 900
+				transform rotate(45deg)
+		
+		&.clickToDismiss .inner:after
+			display inline-block
+			content '(Dismiss)'
+			text-decoration underline
+			margin-left 15px

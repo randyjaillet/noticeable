@@ -1,0 +1,163 @@
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+THIS FILE IS COMPILED. EDIT THE ORIGINAL STYLUS FILE IN SRC/, NOT THIS!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#noticeable-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: right;
+  max-height: 100vh;
+  overflow: auto;
+}
+#noticeable-container .noticeable {
+  margin: 5px;
+}
+#noticeable-container .noticeable .inner {
+  display: inline-block;
+  position: relative;
+  padding: 8px 13px;
+  background-color: rgba(0,0,0,0.7);
+  border: 2px solid #000;
+  color: #ccc;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+#noticeable-container .noticeable .inner a {
+  display: inline-block;
+  margin-left: 15px;
+  color: inherit;
+  text-decoration: underline;
+}
+#noticeable-container .noticeable.success .inner {
+  border-color: #53b248;
+  color: #2e6228;
+  background-color: rgba(83,178,72,0.7);
+}
+#noticeable-container .noticeable.success .inner:before {
+  display: inline-block;
+  content: ' ';
+  height: 12px;
+  width: 5px;
+  margin: -3px 10px 0 0;
+  border: 5px solid #2e6228;
+  border-top: none;
+  border-left: none;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#noticeable-container .noticeable.info .inner {
+  border-color: #4774b3;
+  color: #2b466b;
+  background-color: rgba(71,116,179,0.7);
+}
+#noticeable-container .noticeable.info .inner:before {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -4px 10px 0 0;
+  content: 'i';
+  font-size: 130%;
+  line-height: 10px;
+  font-weight: 900;
+}
+#noticeable-container .noticeable.warning .inner {
+  border-color: #b2b347;
+  color: #626227;
+  background-color: rgba(178,179,71,0.7);
+}
+#noticeable-container .noticeable.warning .inner:before {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -4px 11px 0 0;
+  content: '!';
+  font-size: 150%;
+  line-height: 10px;
+  font-weight: 900;
+}
+#noticeable-container .noticeable.error .inner {
+  border-color: #b34747;
+  color: #7d3232;
+  background-color: rgba(179,71,71,0.7);
+}
+#noticeable-container .noticeable.error .inner:before {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -4px 6px 0 0;
+  content: '+';
+  font-size: 200%;
+  line-height: 10px;
+  font-weight: 900;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#noticeable-container .noticeable.clickToDismiss .inner:after {
+  display: inline-block;
+  content: '(Dismiss)';
+  text-decoration: underline;
+  margin-left: 15px;
+}
