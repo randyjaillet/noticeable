@@ -70,4 +70,4 @@ The `type` option provided at instantiation.
 
 ### `ele`
 
-The actual `div.opti` as a jQuery object.
+The actual `.noticeable` as a jQuery object.
