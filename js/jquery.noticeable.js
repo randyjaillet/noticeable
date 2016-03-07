@@ -86,11 +86,19 @@ var Noticeable = function (msg, options) {
 	}
 
 	if (this.settings.autoDestroy) {
-		setTimeout(
+		this.timer = new Timer(
 			function () {
 				context.destroy(context.settings.callbacks.destroy);
 			},
 			this.settings.autoDestroy
+		);
+		this.ele.hover(
+			function () {
+				context.timer.pause();
+			},
+			function () {
+				context.timer.resume();
+			}
 		)
 	} else {
 		this.ele.addClass("clickToDismiss");
@@ -109,4 +117,23 @@ Noticeable.prototype.destroy = function (callback) {
 			if (callback) callback ();
 		}
 	);
+}
+
+function Timer(callback, delay) {
+	var timerId, start;
+	
+	this.remaining = delay;
+	
+	this.pause = function() {
+		window.clearTimeout(timerId);
+		this.remaining -= new Date() - start;
+	};
+	
+	this.resume = function() {
+		start = new Date();
+		window.clearTimeout(timerId);
+		timerId = window.setTimeout(callback, this.remaining);
+	};
+	
+	this.resume();
 }
