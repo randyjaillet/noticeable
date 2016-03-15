@@ -96,8 +96,8 @@ THIS FILE IS COMPILED. EDIT THE ORIGINAL STYLUS FILE IN SRC/, NOT THIS!!
 #noticeable-container .noticeable.success .inner:before {
   display: inline-block;
   content: ' ';
-  height: 12px;
-  width: 5px;
+  height: 15px;
+  width: 9px;
   margin: -3px 10px 0 0;
   border: 5px solid #2e6228;
   border-top: none;
